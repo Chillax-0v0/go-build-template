@@ -33,6 +33,8 @@ jobs:
         cat /etc/vbox/networks.conf
         docker-machine create --driver virtualbox default
         docker-machine env default
+        echo "-----"
+        ls ~/.docker/cli-plugins
     - name: Build containers
       run: |
         eval "$(docker-machine env default)"
